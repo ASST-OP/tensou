@@ -1,1 +1,22 @@
-テスト
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>オプの避難先</title>
+    <script>
+        function redirectToSelectedOption() {
+            var selectElement = document.getElementById("redirectOptions");
+            var selectedOption = selectElement.options[selectElement.selectedIndex].value;
+            window.location.href = selectedOption;
+        }
+    </script>
+</head>
+<body>
+    <label for="redirectOptions">参加したいオプの避難先:</label>
+    <select id="redirectOptions">
+        <option value="https://example.com/page1">ページ1</option>
+        <option value="https://example.com/page2">ページ2</option>
+    </select>
+    <button onclick="redirectToSelectedOption()">選択したオプに参加</button>
+</body>
+</html>
